@@ -42,7 +42,7 @@ plt
 
 Overlay a transparent rectangle.
 
-```{r rectangle, fig.heigh=3, fig.width=4}
+```{r rectangle, fig.height=3, fig.width=4}
 plt <-
   plt +
   geom_rect(aes(xmin = 0, xmax=2, ymin = 0, ymax = 2),
