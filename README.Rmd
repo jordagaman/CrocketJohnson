@@ -1,0 +1,41 @@
+---
+title: "Crocket Johnson Inspired Math Art"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Square Root of Two
+
+Inspiration [here](https://americanhistory.si.edu/collections/search/object/nmah_694637).
+
+First, let's get a canvas.
+
+```{r canvas, fig.height=3, fig.width=3}
+library(tidyverse)
+plt <- 
+  ggplot() +
+  coord_cartesian(
+    xlim   = c(0,3),
+    ylim   = c(0,2),
+    expand = FALSE
+  )
+plt
+```
+
+Next, we need a semi-circle.
+
+```{r semicircle, fig.height=3, fig.width=3}
+crcl <-
+  tibble(
+    r = seq(0, 180, 1)*pi/180,
+    x = 1.5*cos(r) + 1.5,
+    y = 1.5*sin(r)
+  )
+plt <-
+  plt +
+  geom_polygon(aes(x = x, y = y), crcl)
+plt
+```
