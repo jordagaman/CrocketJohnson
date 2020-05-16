@@ -4,7 +4,7 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 ```
 
 ## Square Root of Two
@@ -37,5 +37,16 @@ crcl <-
 plt <-
   plt +
   geom_polygon(aes(x = x, y = y), crcl)
+plt
+```
+
+Overlay a transparent rectangle.
+
+```{r rectangle, fig.heigh=3, fig.width=3}
+plt <-
+  plt +
+  geom_rect(aes(xmin = 0, xmax=2, ymin = 0, ymax = 2),
+            alpha = 0.5,
+            color = 'white')
 plt
 ```
