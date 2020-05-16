@@ -47,7 +47,7 @@ plt <-
   plt +
   geom_rect(aes(xmin = 0, xmax=2, ymin = 0, ymax = 2),
             alpha = 0.5,
-            fill = 'white',
+            fill  = 'white',
             color = NA)
 plt
 ```
