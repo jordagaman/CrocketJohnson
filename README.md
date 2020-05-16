@@ -20,7 +20,8 @@ plt <-
   scale_x_continuous(name = '', labels = NULL) +
   scale_y_continuous(name = '', labels = NULL) +
   theme_bw() +
-  theme(panel.grid.major = element_blank()) 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) 
 plt
 ```
 
@@ -37,7 +38,9 @@ crcl <-
   )
 plt <-
   plt +
-  geom_polygon(aes(x = x, y = y), crcl)
+  geom_polygon(aes(x = x, y = y), crcl) +
+  geom_vline(xintercept = 0:3, size = 1, color = 'black') +
+  geom_hline(yintercept = 0:3, size = 1, color = 'black')
 plt
 ```
 
@@ -48,10 +51,14 @@ Overlay a transparent rectangle.
 ``` r
 plt <-
   plt +
-  geom_rect(aes(xmin = 0, xmax=2, ymin = 0, ymax = 2),
+  geom_rect(aes(xmin = 0, 
+                xmax = 2, 
+                ymin = 0, 
+                ymax = 2),
             alpha = 0.5,
             fill  = 'white',
-            color = NA)
+            color = 'black', 
+            size  = 1)
 plt
 ```
 
