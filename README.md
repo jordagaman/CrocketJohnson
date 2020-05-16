@@ -13,8 +13,8 @@ library(tidyverse)
 plt <- 
   ggplot() +
   coord_cartesian(
-    xlim   = c(0,3),
-    ylim   = c(0,2),
+    xlim   = c(-0.5,3.5),
+    ylim   = c(-0.5,2.5),
     expand = FALSE
   )
 plt
@@ -46,7 +46,8 @@ plt <-
   plt +
   geom_rect(aes(xmin = 0, xmax=2, ymin = 0, ymax = 2),
             alpha = 0.5,
-            color = 'white')
+            fill = 'white',
+            color = NA)
 plt
 ```
 

@@ -13,13 +13,13 @@ Inspiration [here](https://americanhistory.si.edu/collections/search/object/nmah
 
 First, let's get a canvas.
 
-```{r canvas, fig.height=3, fig.width=3}
+```{r canvas, fig.height=3, fig.width=4}
 library(tidyverse)
 plt <- 
   ggplot() +
   coord_cartesian(
-    xlim   = c(0,3),
-    ylim   = c(0,2),
+    xlim   = c(-0.5,3.5),
+    ylim   = c(-0.5,2.5),
     expand = FALSE
   )
 plt
@@ -27,7 +27,7 @@ plt
 
 Next, we need a semi-circle.
 
-```{r semicircle, fig.height=3, fig.width=3}
+```{r semicircle, fig.height=3, fig.width=4}
 crcl <-
   tibble(
     r = seq(0, 180, 1)*pi/180,
@@ -42,11 +42,12 @@ plt
 
 Overlay a transparent rectangle.
 
-```{r rectangle, fig.heigh=3, fig.width=3}
+```{r rectangle, fig.heigh=3, fig.width=4}
 plt <-
   plt +
   geom_rect(aes(xmin = 0, xmax=2, ymin = 0, ymax = 2),
             alpha = 0.5,
-            color = 'white')
+            fill = 'white',
+            color = NA)
 plt
 ```
