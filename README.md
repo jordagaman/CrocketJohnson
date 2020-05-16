@@ -16,7 +16,11 @@ plt <-
     xlim   = c(-0.5,3.5),
     ylim   = c(-0.5,2.5),
     expand = FALSE
-  )
+  ) +
+  scale_x_continuous(name = '', labels = NULL) +
+  scale_y_continuous(name = '', labels = NULL) +
+  theme_bw() +
+  theme(panel.grid.major = element_blank()) 
 plt
 ```
 
@@ -46,7 +50,7 @@ plt <-
   plt +
   geom_rect(aes(xmin = 0, xmax=2, ymin = 0, ymax = 2),
             alpha = 0.5,
-            fill = 'white',
+            fill  = 'white',
             color = NA)
 plt
 ```
