@@ -38,13 +38,13 @@ plt <-
   plt +
   geom_rect(mapping = aes(xmin = 0, xmax = 2, 
                           ymin = 0, ymax = 2),
-            alpha   = 0.5,
+            alpha   = 1,
             fill    = 'red',
             color   = 'black', 
             size    = 1) +
   geom_rect(mapping = aes(xmin = 2, xmax = 3, 
                           ymin = 0, ymax = 2),
-            alpha   = 0.5,
+            alpha   = 1,
             fill    = 'blue',
             color   = 'black', 
             size    = 1)
@@ -75,7 +75,7 @@ Overlay a transparent rectangle.
 ``` r
 plt <-
   plt +
-    geom_rect(mapping = aes(xmin = 0, xmax = 2, 
+  geom_rect(mapping = aes(xmin = 0, xmax = 2, 
                           ymin = 0, ymax = 2),
             alpha   = 0.5,
             fill    = 'blue',
