@@ -19,6 +19,8 @@ plt <-
   ) +
   scale_x_continuous(name = '', labels = NULL) +
   scale_y_continuous(name = '', labels = NULL) +
+  geom_vline(xintercept = 0:3, size = 1, color = 'black') +
+  geom_hline(yintercept = 0:3, size = 1, color = 'black') +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -28,6 +30,28 @@ plt
 ```
 
 ![](README_files/figure-markdown_github/canvas-1.png)
+
+Add some red and blue rectangles
+
+``` r
+plt <-
+  plt +
+  geom_rect(mapping = aes(xmin = 0, xmax = 2, 
+                          ymin = 0, ymax = 2),
+            alpha   = 0.5,
+            fill    = 'red',
+            color   = 'black', 
+            size    = 1) +
+  geom_rect(mapping = aes(xmin = 2, xmax = 3, 
+                          ymin = 0, ymax = 2),
+            alpha   = 0.5,
+            fill    = 'blue',
+            color   = 'black', 
+            size    = 1)
+plt
+```
+
+![](README_files/figure-markdown_github/redblue-1.png)
 
 Next, we need a semi-circle.
 
@@ -40,9 +64,7 @@ crcl <-
   )
 plt <-
   plt +
-  geom_polygon(aes(x = x, y = y), crcl) +
-  geom_vline(xintercept = 0:3, size = 1, color = 'black') +
-  geom_hline(yintercept = 0:3, size = 1, color = 'black')
+  geom_polygon(aes(x = x, y = y), crcl) 
 plt
 ```
 
@@ -53,12 +75,24 @@ Overlay a transparent rectangle.
 ``` r
 plt <-
   plt +
-  geom_rect(mapping = aes(xmin = 0, xmax = 2, 
+    geom_rect(mapping = aes(xmin = 0, xmax = 2, 
                           ymin = 0, ymax = 2),
             alpha   = 0.5,
-            fill    = 'white',
+            fill    = 'blue',
+            color   = 'black', 
+            size    = 1) +
+  geom_rect(mapping = aes(xmin = 2, xmax = 3, 
+                          ymin = 0, ymax = 2),
+            alpha   = 0.5,
+            fill    = 'red',
             color   = 'black', 
             size    = 1)
+#  geom_rect(mapping = aes(xmin = 0, xmax = 2, 
+#                          ymin = 0, ymax = 2),
+#            alpha   = 0.5,
+#            fill    = 'white',
+#            color   = 'black', 
+#            size    = 1)
 plt
 ```
 
