@@ -43,14 +43,12 @@ plt <-
                           ymin = 0, ymax = 2),
             alpha   = 1,
             fill    = 'red',
-            color   = 'white', 
-            size    = 1) +
+            color   = NA) +
   geom_rect(mapping = aes(xmin = 2, xmax = 3, 
                           ymin = 0, ymax = 2),
             alpha   = 1,
             fill    = 'yellow',
-            color   = 'white', 
-            size    = 1)
+            color   = NA)
 plt
 ```
 
@@ -71,23 +69,37 @@ plt <-
 plt
 ```
 
-Overlay a transparent rectangle.
+Overlay the first transparent rectangle.
 
-```{r rectangle, fig.height=3, fig.width=4}
+```{r rectangle1, fig.height=3, fig.width=4}
 plt <-
   plt +
   geom_rect(mapping = aes(xmin = 0, xmax = 2, 
                           ymin = 0, ymax = 2),
             alpha   = 0.5,
             fill    = 'yellow',
-            color   = 'white', 
-            size    = 1) +
+            color   = NA)
+plt
+```
+
+Overlay the second transparent rectangle.
+
+```{r rectangle2, fig.height=3, fig.width=4}
+plt <-
+  plt +
   geom_rect(mapping = aes(xmin = 2, xmax = 3, 
                           ymin = 0, ymax = 2),
             alpha   = 0.5,
             fill    = 'red',
-            color   = 'white', 
-            size    = 1) +
+            color   = NA)
+plt
+```
+
+Add some lines to make it look real nice.
+
+```{r gridlines, fig.height=3, fig.width=4}
+plt <-
+  plt +
   geom_line(mapping = aes(x = x, y=y),
             data    = crcl,
             color   = 'white',

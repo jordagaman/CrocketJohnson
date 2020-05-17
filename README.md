@@ -38,14 +38,12 @@ plt <-
                           ymin = 0, ymax = 2),
             alpha   = 1,
             fill    = 'red',
-            color   = 'white', 
-            size    = 1) +
+            color   = NA) +
   geom_rect(mapping = aes(xmin = 2, xmax = 3, 
                           ymin = 0, ymax = 2),
             alpha   = 1,
             fill    = 'yellow',
-            color   = 'white', 
-            size    = 1)
+            color   = NA)
 plt
 ```
 
@@ -68,7 +66,7 @@ plt
 
 ![](README_files/figure-markdown_github/semicircle-1.png)
 
-Overlay a transparent rectangle.
+Overlay the first transparent rectangle.
 
 ``` r
 plt <-
@@ -77,14 +75,32 @@ plt <-
                           ymin = 0, ymax = 2),
             alpha   = 0.5,
             fill    = 'yellow',
-            color   = 'white', 
-            size    = 1) +
+            color   = NA)
+plt
+```
+
+![](README_files/figure-markdown_github/rectangle1-1.png)
+
+Overlay the second transparent rectangle.
+
+``` r
+plt <-
+  plt +
   geom_rect(mapping = aes(xmin = 2, xmax = 3, 
                           ymin = 0, ymax = 2),
             alpha   = 0.5,
             fill    = 'red',
-            color   = 'white', 
-            size    = 1) +
+            color   = NA)
+plt
+```
+
+![](README_files/figure-markdown_github/rectangle2-1.png)
+
+Add some lines to make it look real nice.
+
+``` r
+plt <-
+  plt +
   geom_line(mapping = aes(x = x, y=y),
             data    = crcl,
             color   = 'white',
@@ -94,4 +110,4 @@ plt <-
 plt
 ```
 
-![](README_files/figure-markdown_github/rectangle-1.png)
+![](README_files/figure-markdown_github/gridlines-1.png)
