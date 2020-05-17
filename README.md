@@ -47,7 +47,7 @@ plt
 Next, we need a semi-circle.
 
 ``` r
-crcl <- tibble(r = seq(0, 180, 1)*pi/180,
+crcl <- tibble(r = seq(0, 180, 0.2)*pi/180,
                x = 1.5*cos(r) + 1.5,
                y = 1.5*sin(r) )
 plt <- plt + geom_polygon(mapping = aes(x = x, y = y), 
