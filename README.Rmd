@@ -26,7 +26,9 @@ plt <-
   scale_y_continuous(name = '', labels = NULL) +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank()) 
+        panel.grid.minor = element_blank(),
+        axis.line        = element_blank(),
+        axis.ticks       = element_blank()) 
 plt
 ```
 

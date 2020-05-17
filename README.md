@@ -21,7 +21,9 @@ plt <-
   scale_y_continuous(name = '', labels = NULL) +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank()) 
+        panel.grid.minor = element_blank(),
+        axis.line        = element_blank(),
+        axis.ticks       = element_blank()) 
 plt
 ```
 
@@ -51,14 +53,12 @@ Overlay a transparent rectangle.
 ``` r
 plt <-
   plt +
-  geom_rect(aes(xmin = 0, 
-                xmax = 2, 
-                ymin = 0, 
-                ymax = 2),
-            alpha = 0.5,
-            fill  = 'white',
-            color = 'black', 
-            size  = 1)
+  geom_rect(mapping = aes(xmin = 0, xmax = 2, 
+                          ymin = 0, ymax = 2),
+            alpha   = 0.5,
+            fill    = 'white',
+            color   = 'black', 
+            size    = 1)
 plt
 ```
 
