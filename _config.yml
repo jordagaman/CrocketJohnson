@@ -1,1 +1,4 @@
 theme: jekyll-theme-leap-day
+title: Math Art
+description: Using R to generate mathematically significant art inspired by Crocket Johnson.
+show_downloads: "false"
