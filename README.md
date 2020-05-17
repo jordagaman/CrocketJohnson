@@ -43,7 +43,7 @@ plt <-
   geom_rect(mapping = aes(xmin = 2, xmax = 3, 
                           ymin = 0, ymax = 2),
             alpha   = 1,
-            fill    = 'blue',
+            fill    = 'yellow',
             color   = 'white', 
             size    = 1)
 plt
@@ -62,7 +62,7 @@ crcl <-
   )
 plt <-
   plt +
-  geom_polygon(aes(x = x, y = y), crcl) 
+  geom_polygon(aes(x = x, y = y), crcl, fill = 'gray80') 
 plt
 ```
 
@@ -76,7 +76,7 @@ plt <-
   geom_rect(mapping = aes(xmin = 0, xmax = 2, 
                           ymin = 0, ymax = 2),
             alpha   = 0.5,
-            fill    = 'blue',
+            fill    = 'yellow',
             color   = 'white', 
             size    = 1) +
   geom_rect(mapping = aes(xmin = 2, xmax = 3, 
