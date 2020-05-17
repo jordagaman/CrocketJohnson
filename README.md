@@ -91,13 +91,6 @@ plt <-
             size    = 1) +
   geom_vline(xintercept = 0:3, size = 1, color = 'white') +
   geom_hline(yintercept = 0:3, size = 1, color = 'white')
-
-#  geom_rect(mapping = aes(xmin = 0, xmax = 2, 
-#                          ymin = 0, ymax = 2),
-#            alpha   = 0.5,
-#            fill    = 'white',
-#            color   = 'black', 
-#            size    = 1)
 plt
 ```
 
