@@ -24,8 +24,6 @@ plt <-
   ) +
   scale_x_continuous(name = '', labels = NULL) +
   scale_y_continuous(name = '', labels = NULL) +
-  geom_vline(xintercept = 0:3, size = 1, color = 'black') +
-  geom_hline(yintercept = 0:3, size = 1, color = 'black') +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -45,13 +43,13 @@ plt <-
                           ymin = 0, ymax = 2),
             alpha   = 1,
             fill    = 'red',
-            color   = 'black', 
+            color   = 'white', 
             size    = 1) +
   geom_rect(mapping = aes(xmin = 2, xmax = 3, 
                           ymin = 0, ymax = 2),
             alpha   = 1,
             fill    = 'blue',
-            color   = 'black', 
+            color   = 'white', 
             size    = 1)
 plt
 ```
@@ -82,14 +80,17 @@ plt <-
                           ymin = 0, ymax = 2),
             alpha   = 0.5,
             fill    = 'blue',
-            color   = 'black', 
+            color   = 'white', 
             size    = 1) +
   geom_rect(mapping = aes(xmin = 2, xmax = 3, 
                           ymin = 0, ymax = 2),
             alpha   = 0.5,
             fill    = 'red',
-            color   = 'black', 
-            size    = 1)
+            color   = 'white', 
+            size    = 1) +
+  geom_vline(xintercept = 0:3, size = 1, color = 'white') +
+  geom_hline(yintercept = 0:3, size = 1, color = 'white')
+
 #  geom_rect(mapping = aes(xmin = 0, xmax = 2, 
 #                          ymin = 0, ymax = 2),
 #            alpha   = 0.5,
