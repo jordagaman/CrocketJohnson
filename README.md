@@ -27,17 +27,21 @@ plt
 
 ![](README_files/figure-markdown_github/canvas-1.png)
 
-Add some red and blue rectangles
+Add some rectangles with the first and second color.
 
 ``` r
+color1 <- 'red'
+color2 <- 'yellow'
+rectmap1 <- aes(xmin = 0, xmax = 2, ymin = 0, ymax = 2)
+rectmap2 <- aes(xmin = 2, xmax = 3, ymin = 0, ymax = 2)
 plt <- plt +
-  geom_rect(mapping = aes(xmin = 0, xmax = 2, ymin = 0, ymax = 2),
+  geom_rect(mapping = rectmap1,
             alpha   = 1,
-            fill    = 'red',
+            fill    = color1,
             color   = NA) +
-  geom_rect(mapping = aes(xmin = 2, xmax = 3, ymin = 0, ymax = 2),
+  geom_rect(mapping = rectmap2,
             alpha   = 1,
-            fill    = 'yellow',
+            fill    = color2,
             color   = NA)
 plt
 ```
@@ -61,9 +65,9 @@ plt
 Overlay the first transparent rectangle.
 
 ``` r
-plt <- plt + geom_rect(mapping = aes(xmin = 0, xmax = 2, ymin = 0, ymax = 2),
+plt <- plt + geom_rect(mapping = rectmap1,
                        alpha   = 0.5,
-                       fill    = 'yellow',
+                       fill    = color2,
                        color   = NA)
 plt
 ```
@@ -73,9 +77,9 @@ plt
 Overlay the second transparent rectangle.
 
 ``` r
-plt <- plt + geom_rect(mapping = aes(xmin = 2, xmax = 3, ymin = 0, ymax = 2),
+plt <- plt + geom_rect(mapping = rectmap2,
                        alpha   = 0.5,
-                       fill    = 'red',
+                       fill    = color1,
                        color   = NA)
 plt
 ```
