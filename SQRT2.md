@@ -1,10 +1,13 @@
-Crocket Johnson Inspired Math Art
+The Square Root of Two
 ================
 
-Square Root of Two
-------------------
+Background
+----------
 
 Inspiration [here](https://americanhistory.si.edu/collections/search/object/nmah_694637).
+
+Canvas
+------
 
 First, let's get a canvas.
 
@@ -27,6 +30,9 @@ plt
 
 ![](SQRT2_files/figure-markdown_github/canvas-1.png)
 
+Rectangles
+----------
+
 Add some rectangles with the first and second color.
 
 ``` r
@@ -43,6 +49,9 @@ plt
 
 ![](SQRT2_files/figure-markdown_github/redblue-1.png)
 
+A semi-circle
+-------------
+
 Next, we need a semi-circle.
 
 ``` r
@@ -54,6 +63,9 @@ plt
 ```
 
 ![](SQRT2_files/figure-markdown_github/semicircle-1.png)
+
+Transparent rectangles
+----------------------
 
 Overlay the first transparent rectangle.
 
@@ -72,6 +84,9 @@ plt
 ```
 
 ![](SQRT2_files/figure-markdown_github/rectangle2-1.png)
+
+White accent lines
+------------------
 
 Add some lines to make it look real nice.
 
