@@ -25,7 +25,7 @@ plt <-
 plt
 ```
 
-![](README_files/figure-markdown_github/canvas-1.png)
+![](SQRT2_files/figure-markdown_github/canvas-1.png)
 
 Add some rectangles with the first and second color.
 
@@ -41,7 +41,7 @@ plt <- plt + geom_rect(mapping = rectmap1, alpha = 1, fill = color1, color = NA)
 plt
 ```
 
-![](README_files/figure-markdown_github/redblue-1.png)
+![](SQRT2_files/figure-markdown_github/redblue-1.png)
 
 Next, we need a semi-circle.
 
@@ -53,7 +53,7 @@ plt <- plt + geom_polygon(mapping = aes(x = x, y = y), data = crcl, fill = 'gray
 plt
 ```
 
-![](README_files/figure-markdown_github/semicircle-1.png)
+![](SQRT2_files/figure-markdown_github/semicircle-1.png)
 
 Overlay the first transparent rectangle.
 
@@ -62,7 +62,7 @@ plt <- plt + geom_rect(mapping = rectmap1, alpha = 0.5, fill = color2, color = N
 plt
 ```
 
-![](README_files/figure-markdown_github/rectangle1-1.png)
+![](SQRT2_files/figure-markdown_github/rectangle1-1.png)
 
 Overlay the second transparent rectangle.
 
@@ -71,7 +71,7 @@ plt <- plt + geom_rect(mapping = rectmap2, alpha = 0.5, fill = color1, color = N
 plt
 ```
 
-![](README_files/figure-markdown_github/rectangle2-1.png)
+![](SQRT2_files/figure-markdown_github/rectangle2-1.png)
 
 Add some lines to make it look real nice.
 
@@ -82,4 +82,4 @@ plt <- plt + geom_line(mapping = aes(x = x, y = y), data = crcl, color = 'white'
 plt
 ```
 
-![](README_files/figure-markdown_github/gridlines-1.png)
+![](SQRT2_files/figure-markdown_github/gridlines-1.png)
