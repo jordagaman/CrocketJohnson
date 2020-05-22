@@ -11,31 +11,36 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r square-1, fig.height=3, fig.width=4}
 library(tidyverse)
-plt <- 
+canvas <-
   ggplot() +
   coord_equal(xlim   = c(-0.5,3.5),
               ylim   = c(-3  ,0.5),
               expand = FALSE) +
   scale_x_continuous(name = '', labels = NULL) +
   scale_y_continuous(name = '', labels = NULL) +
-  geom_rect(aes(ymax =  0, xmin =  0, xmax = 1, 
-                ymin = -1),
-            alpha = 0.1,
-            fill = 'blue') +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         axis.line        = element_blank(),
         axis.ticks       = element_blank()) 
-plt
+sqr1 <-  
+  geom_rect(aes(ymax =  0, xmin =  0, xmax = 1, 
+                ymin = -1),
+            alpha = 0.1,
+            fill = 'blue')
+canvas + sqr1
 ```
 
 ## A circle
 
 ```{r circle-1, fig.height=3, fig.width=4}
 library(tidyverse)
-#plt <- 
-  plt +
-  geom_area()
-#plt
+unit_crcl <- tibble(r = seq(0, 90, 0.2)*pi/180,
+                    x =  cos(r),
+                    y = -sin(r) )
+crcl1 <-  
+  geom_area(aes(x=x*sqrt(2), y=y*sqrt(2)), 
+            unit_crcl,
+            alpha = 0.2)
+canvas + crcl1 + sqr1
 ```
